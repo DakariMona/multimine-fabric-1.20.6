@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "multimine-fabric",
+	"version": "${version}",
+	"name": "MultiMine Fabric",
+	"description": "Multi mine with this mod!",
+	"authors": [
+		"Dakari Mona"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/multimine-fabric",
+		"sources": "https://github.com/DakariMona/MultiMine-Fabric"
+	},
+	"license": "GPU GPL v3",
+	"icon": "assets/multimine-fabric/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.MultiMineFabric"
+		],
+		"client": [
+			"name.modid.MultiMineFabricClient"
+		],
+		"fabric-datagen": [
+			"name.modid.MultiMineFabricDataGenerator"
+		]
+	},
+	"mixins": [
+		"multimine-fabric.mixins.json",
+		{
+			"config": "multimine-fabric.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
